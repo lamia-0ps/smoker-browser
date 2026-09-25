@@ -66,12 +66,25 @@ jobs:
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
-          gradle-version: "8.13"
+          gradle-version: "8.9"
 
       - name: Assemble debug APK
         run: |
+          set -o pipefail
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
-          gradle assembleDebug --no-daemon --stacktrace
+          cat local.properties
+          ls -la "$ANDROID_SDK_ROOT" || true
+          gradle assembleDebug --no-daemon --stacktrace --info 2>&1 | tee gradle-build.log
+
+      - name: Keep Gradle log on failure
+        if: failure()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          tail -n 200 gradle-build.log || true
+          git add gradle-build.log || true
+          git commit -m "CI: gradle build log [skip ci]" || true
+          git push || true
 
       - name: Publish APK and icons
         run: |
@@ -94,6 +107,7 @@ jobs:
           fi
 
       - uses: actions/upload-artifact@v4
+        if: success()
         with:
           name: SmokerBrowser
           path: SmokerBrowser.apk
