@@ -1,5 +1,7 @@
 package com.smoke.browser;
 
+import com.smoke.browser.databinding.MainBinding;
+
 import android.animation.*;
 import android.app.*;
 import android.content.*;
@@ -1909,5 +1911,11 @@ public class MainActivity extends AppCompatActivity {
         dialog.setContentView(root);
         
         if (dialog.getWindow() != null) {
-            dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(a
+            dialog.getWindow().setBackgroundDrawable(new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+            int width = (int)(context.getResources().getDisplayMetrics().widthPixels * 0.90);
+            dialog.getWindow().setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+        }
 
+        dialog.show();
+    }
+}
