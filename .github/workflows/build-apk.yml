@@ -24,7 +24,7 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Generate cigarette launcher icons
+      - name: Generate Smoker launcher icons
         run: |
           pip install --quiet pillow
           python scripts/make_icon.py
@@ -69,6 +69,9 @@ jobs:
           else:
               print("file tail already complete")
           PY
+
+      - name: Apply Smoker feature pack
+        run: python3 scripts/apply_smoker_pack.py
 
       - name: Install Android command-line tools
         run: |
@@ -118,14 +121,11 @@ jobs:
           ls -lh SmokerBrowser.apk
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add SmokerBrowser.apk dist/SmokerBrowser.apk \
-            app/src/main/res/mipmap-* \
-            app/src/main/java/com/smoke/browser/MainActivity.java \
-            fastlane/metadata/android/en-US/images/icon.png || true
+          git add -A SmokerBrowser.apk dist app assets scripts fastlane || true
           if git diff --cached --quiet; then
             echo "nothing to commit"
           else
-            git commit -m "Add cigarette icon and SmokerBrowser.apk [skip ci]"
+            git commit -m "Smoker 1.1.0: flame logo, smokey tools icon, Smoker Bots manager [skip ci]"
             git push
           fi
 
