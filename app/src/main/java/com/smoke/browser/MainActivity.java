@@ -1958,7 +1958,7 @@ public class MainActivity extends AppCompatActivity {
         root.addView(header);
 
         android.widget.TextView sub = new android.widget.TextView(this);
-        sub.setText("Your saved bots — tap one to run it on this page");
+        sub.setText("Your saved bots — tap one to run • Smoker v1.1.2");
         sub.setTextSize(13);
         sub.setTextColor(0xFFB0BEC5);
         sub.setPadding(0, 0, 0, 25);
@@ -2104,7 +2104,7 @@ public class MainActivity extends AppCompatActivity {
         btnRow.setGravity(android.view.Gravity.RIGHT);
         btnRow.setPadding(0, 25, 0, 0);
         androidx.cardview.widget.CardView cancel = createCardButton("Cancel", 0xFF263238, 0xFFB0BEC5, false, false);
-        androidx.cardview.widget.CardView save = createCardButton("💾 Save Bot", 0xFFFF7043, 0xFFFFFFFF, false, false);
+        androidx.cardview.widget.CardView save = createCardButton("💾 Save & Run", 0xFFFF7043, 0xFFFFFFFF, false, false);
         btnRow.addView(cancel);
         btnRow.addView(save);
         root.addView(btnRow);
@@ -2121,9 +2121,8 @@ public class MainActivity extends AppCompatActivity {
                 o.put("code", code);
                 bots2.put(o);
                 persistBots(bots2);
-                showStatus("💾 Bot '" + name + "' saved!");
                 dialog.dismiss();
-                showSmokerBotsDialog(webView);
+                runSmokerBot(webView, name, code);
             } catch (Exception e) { showStatus("Save failed"); }
         });
 
