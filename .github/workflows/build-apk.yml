@@ -79,6 +79,9 @@ jobs:
       - name: Apply Smoker fixes 2
         run: python3 scripts/apply_smoker_fixes2.py
 
+      - name: Apply Smoker fixes 3
+        run: python3 scripts/apply_smoker_fixes3.py
+
       - name: Install Android command-line tools
         run: |
           set -euo pipefail
