@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
-"""Generate Smoker Browser launcher + tools icons from the flame logo (assets/logo_webp.b64)."""
+"""Generate Smoker Browser launcher + tools icons from the flame logo (assets/logo_webp.part*)."""
 import base64
+import glob
 import io
 import os
 from PIL import Image, ImageDraw, ImageOps
@@ -10,8 +11,13 @@ BG = (18, 22, 29)  # #12161D — matches the artwork backdrop
 
 
 def load_logo():
-    with open(os.path.join(ROOT, "assets", "logo_webp.b64"), "r", encoding="ascii") as fh:
-        data = base64.b64decode(fh.read())
+    parts = sorted(glob.glob(os.path.join(ROOT, "assets", "logo_webp.part*")))
+    single = os.path.join(ROOT, "assets", "logo_webp.b64")
+    if parts:
+        text = "".join(open(p, encoding="ascii").read().strip() for p in parts)
+    else:
+        text = open(single, encoding="ascii").read()
+    data = base64.b64decode(text)
     return Image.open(io.BytesIO(data)).convert("RGBA")
 
 
