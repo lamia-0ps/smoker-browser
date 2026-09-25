@@ -63,7 +63,7 @@
 			android:text="⋮"
 			android:textSize="26sp"
 			android:textStyle="bold"
-			android:textColor="#333333"
+			android:textColor="#FFFFFF"
 			android:focusable="true" />
 	</LinearLayout>
 	<ProgressBar
