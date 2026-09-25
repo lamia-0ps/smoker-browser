@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-xhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-xxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-xhdpi_menu_icon.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-xhdpi/menu_icon.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/layout_main.xml.flat",
+        "source": "com.smoke.browser.app-main-34:/layout/main.xml"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-xxxhdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-mdpi_ic_launcher_foreground.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-xhdpi_default_image.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-xhdpi/default_image.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.smoke.browser.app-main-34:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-nodpi_tools_icon.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-nodpi/tools_icon.png"
+    },
+    {
+        "merged": "com.smoke.browser.app-debug-32:/drawable-hdpi_ic_launcher_foreground.png.flat",
+        "source": "com.smoke.browser.app-main-34:/drawable-hdpi/ic_launcher_foreground.png"
+    }
+]

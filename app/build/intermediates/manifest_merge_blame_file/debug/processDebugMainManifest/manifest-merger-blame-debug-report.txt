@@ -1,0 +1,214 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.smoke.browser"
+4    android:versionCode="2"
+5    android:versionName="1.1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:4:2-64
+11-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:4:19-61
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:5:2-65
+12-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:5:19-62
+13    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+13-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:6:2-77
+13-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:6:19-74
+14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+14-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:7:2-76
+14-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:7:19-73
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:8:2-78
+15-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:8:19-75
+16    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+16-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:9:2-77
+16-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:9:19-74
+17    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+17-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:10:2-80
+17-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:10:19-77
+18    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+18-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:11:2-74
+18-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:11:19-71
+19
+20    <permission
+20-->[androidx.core:core:1.13.0] /home/runner/.gradle/caches/8.9/transforms/f734d3757685d8d992319f55d6e2d5ac/transformed/core-1.13.0/AndroidManifest.xml:22:5-24:47
+21        android:name="com.smoke.browser.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+21-->[androidx.core:core:1.13.0] /home/runner/.gradle/caches/8.9/transforms/f734d3757685d8d992319f55d6e2d5ac/transformed/core-1.13.0/AndroidManifest.xml:23:9-81
+22        android:protectionLevel="signature" />
+22-->[androidx.core:core:1.13.0] /home/runner/.gradle/caches/8.9/transforms/f734d3757685d8d992319f55d6e2d5ac/transformed/core-1.13.0/AndroidManifest.xml:24:9-44
+23
+24    <uses-permission android:name="com.smoke.browser.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+24-->[androidx.core:core:1.13.0] /home/runner/.gradle/caches/8.9/transforms/f734d3757685d8d992319f55d6e2d5ac/transformed/core-1.13.0/AndroidManifest.xml:26:5-97
+24-->[androidx.core:core:1.13.0] /home/runner/.gradle/caches/8.9/transforms/f734d3757685d8d992319f55d6e2d5ac/transformed/core-1.13.0/AndroidManifest.xml:26:22-94
+25
+26    <application
+26-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:12:2-66:16
+27        android:name="com.smoke.browser.SmokeBrowser"
+27-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:17:3-31
+28        android:allowBackup="true"
+28-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:13:3-29
+29        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+29-->[androidx.core:core:1.13.0] /home/runner/.gradle/caches/8.9/transforms/f734d3757685d8d992319f55d6e2d5ac/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
+30        android:debuggable="true"
+31        android:extractNativeLibs="true"
+32        android:icon="@mipmap/ic_launcher"
+32-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:14:3-37
+33        android:label="@string/app_name"
+33-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:16:3-35
+34        android:requestLegacyExternalStorage="true"
+34-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:18:3-46
+35        android:roundIcon="@mipmap/ic_launcher_round"
+35-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:15:3-48
+36        android:theme="@style/AppTheme"
+36-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:20:3-34
+37        android:usesCleartextTraffic="true" >
+37-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:19:3-38
+38        <activity
+38-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:21:3-34:14
+39            android:name="com.smoke.browser.MainActivity"
+39-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:22:4-32
+40            android:configChanges="orientation|screenSize|keyboardHidden|smallestScreenSize|screenLayout"
+40-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:23:4-97
+41            android:exported="true"
+41-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:29:4-27
+42            android:hardwareAccelerated="true"
+42-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:24:4-38
+43            android:screenOrientation="portrait"
+43-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:26:4-40
+44            android:supportsPictureInPicture="true"
+44-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:25:4-43
+45            android:theme="@style/AppTheme"
+45-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:27:4-35
+46            android:windowSoftInputMode="stateHidden" >
+46-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:28:4-45
+47            <intent-filter>
+47-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:30:4-33:20
+48                <action android:name="android.intent.action.MAIN" />
+48-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:31:5-57
+48-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:31:13-54
+49
+50                <category android:name="android.intent.category.LAUNCHER" />
+50-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:32:5-65
+50-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:32:15-62
+51            </intent-filter>
+52        </activity>
+53
+54        <activity-alias
+54-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:54:3-65:20
+55            android:name="com.smoke.browser.BrowserAlias"
+55-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:55:4-32
+56            android:exported="true"
+56-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:57:4-27
+57            android:targetActivity="com.smoke.browser.MainActivity" >
+57-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:56:4-42
+58            <intent-filter>
+58-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:58:4-64:20
+59                <action android:name="android.intent.action.VIEW" />
+59-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:59:5-57
+59-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:59:13-54
+60
+61                <category android:name="android.intent.category.DEFAULT" />
+61-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:60:5-64
+61-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:60:15-61
+62                <category android:name="android.intent.category.BROWSABLE" />
+62-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:61:5-66
+62-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:61:15-63
+63
+64                <data android:scheme="http" />
+64-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:62:5-35
+64-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:62:11-32
+65                <data android:scheme="https" />
+65-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:62:5-35
+65-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:62:11-32
+66            </intent-filter>
+67        </activity-alias>
+68
+69        <activity
+69-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:35:3-39:52
+70            android:name="com.smoke.browser.DebugActivity"
+70-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:36:4-33
+71            android:exported="false"
+71-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:38:4-28
+72            android:screenOrientation="portrait"
+72-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:37:4-40
+73            android:theme="@style/AppTheme.DebugActivity" />
+73-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:39:4-49
+74
+75        <provider
+75-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:40:3-50:14
+76            android:name="androidx.startup.InitializationProvider"
+76-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:41:4-58
+77            android:authorities="com.smoke.browser.androidx-startup"
+77-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:42:4-60
+78            android:exported="false" >
+78-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:43:4-28
+79            <meta-data
+79-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:44:4-46:40
+80                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+80-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:45:5-66
+81                android:value="androidx.startup" />
+81-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:46:5-37
+82            <meta-data
+82-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:47:4-49:40
+83                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+83-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:48:5-63
+84                android:value="androidx.startup" />
+84-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:49:5-37
+85            <meta-data
+85-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:29:13-31:52
+86                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+86-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:30:17-85
+87                android:value="androidx.startup" />
+87-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:31:17-49
+88        </provider>
+89
+90        <uses-library
+90-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:51:3-53:31
+91            android:name="org.apache.http.legacy"
+91-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:52:4-41
+92            android:required="false" />
+92-->/home/runner/work/smoker-browser/smoker-browser/app/src/main/AndroidManifest.xml:53:4-28
+93
+94        <receiver
+94-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:34:9-52:20
+95            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+95-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:35:13-76
+96            android:directBootAware="false"
+96-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:36:13-44
+97            android:enabled="true"
+97-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:37:13-35
+98            android:exported="true"
+98-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:38:13-36
+99            android:permission="android.permission.DUMP" >
+99-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:39:13-57
+100            <intent-filter>
+100-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:40:13-42:29
+101                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:17-91
+101-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:41:25-88
+102            </intent-filter>
+103            <intent-filter>
+103-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:43:13-45:29
+104                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:17-85
+104-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:44:25-82
+105            </intent-filter>
+106            <intent-filter>
+106-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:46:13-48:29
+107                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:17-88
+107-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:47:25-85
+108            </intent-filter>
+109            <intent-filter>
+109-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:49:13-51:29
+110                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:17-95
+110-->[androidx.profileinstaller:profileinstaller:1.3.1] /home/runner/.gradle/caches/8.9/transforms/b6dbd5c360994196cbc5abe1dc367211/transformed/jetified-profileinstaller-1.3.1/AndroidManifest.xml:50:25-92
+111            </intent-filter>
+112        </receiver>
+113    </application>
+114
+115</manifest>
