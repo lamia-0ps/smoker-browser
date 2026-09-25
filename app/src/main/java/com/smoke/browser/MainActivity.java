@@ -261,7 +261,7 @@ public class MainActivity extends AppCompatActivity {
         cardRun.setOnClickListener(v -> {
             String code = editor.getText().toString();
             pref.edit().putString(BOT_CODE_KEY, code).apply();
-            webview.evaluateJavascript("(function(){ try{"+code+"}catch(e){alert(e.message);} })();", null);
+            webview.evaluateJavascript("(function(){ try{"+code+"; return 'OK';}catch(e){return 'ERROR: '+e.message;} })();", r -> showStatus("⚡ Quick Run: " + r));
             isBotRunning = true;
             showStatus("Bot Activated!");
             dialog.dismiss();
@@ -1934,9 +1934,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void runSmokerBot(final android.webkit.WebView webView, String name, String code) {
         getSharedPreferences("BotPrefs", 0).edit().putString(BOT_CODE_KEY, code).apply();
-        webView.evaluateJavascript("(function(){ try{" + code + "}catch(e){console.log('SmokerBot: '+e.message);} })();", null);
+        webView.evaluateJavascript("(function(){ try{" + code + "; return 'OK';}catch(e){return 'ERROR: '+e.message;} })();", r -> showStatus("🔥 " + name + ": " + r));
         isBotRunning = true;
-        showStatus("🔥 " + name + " is working!");
     }
 
     private void showSmokerBotsDialog(final android.webkit.WebView webView) {
@@ -1958,7 +1957,7 @@ public class MainActivity extends AppCompatActivity {
         root.addView(header);
 
         android.widget.TextView sub = new android.widget.TextView(this);
-        sub.setText("Your saved bots — tap one to run • Smoker v1.1.2");
+        sub.setText("Your saved bots — tap one to run • Smoker v1.1.3");
         sub.setTextSize(13);
         sub.setTextColor(0xFFB0BEC5);
         sub.setPadding(0, 0, 0, 25);
@@ -2042,6 +2041,13 @@ public class MainActivity extends AppCompatActivity {
         root.addView(quickBtn);
         newBtn.setOnClickListener(v -> { dialog.dismiss(); showBotCreateDialog(webView); });
         quickBtn.setOnClickListener(v -> { dialog.dismiss(); showBotEditor(webView); });
+
+        androidx.cardview.widget.CardView testBtn = createCardButton("🧪 TEST BOT ENGINE", 0xFF263238, 0xFF80DEEA, false, false);
+        root.addView(testBtn);
+        testBtn.setOnClickListener(v -> {
+            dialog.dismiss();
+            webView.evaluateJavascript("(function(){try{document.documentElement.style.boxShadow='inset 0 0 0 12px #76FF03';document.title='SMOKER OK';return 'ENGINE OK — lime border = bots work';}catch(e){return 'ERROR: '+e.message;}})()", r -> showStatus("🧪 " + r));
+        });
 
         dialog.setContentView(root);
         if (dialog.getWindow() != null) {
