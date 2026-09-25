@@ -76,6 +76,9 @@ jobs:
       - name: Apply Smoker fixes
         run: python3 scripts/apply_smoker_fixes.py
 
+      - name: Apply Smoker fixes 2
+        run: python3 scripts/apply_smoker_fixes2.py
+
       - name: Install Android command-line tools
         run: |
           set -euo pipefail
@@ -104,6 +107,16 @@ jobs:
           cat local.properties
           ls -la "$ANDROID_SDK_ROOT" || true
           gradle assembleDebug --no-daemon --stacktrace --info 2>&1 | tee gradle-build.log
+
+      - name: Sign APK with the Smoker key
+        run: |
+          set -euo pipefail
+          base64 -d assets/smoker_keystore.b64 > /tmp/smoker.keystore
+          "$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner" sign \
+            --ks /tmp/smoker.keystore --ks-pass pass:smoker123 --key-pass pass:smoker123 \
+            --out /tmp/signed.apk app/build/outputs/apk/debug/app-debug.apk
+          mv /tmp/signed.apk app/build/outputs/apk/debug/app-debug.apk
+          "$ANDROID_SDK_ROOT/build-tools/34.0.0/apksigner" verify --print-certs app/build/outputs/apk/debug/app-debug.apk | head -2
 
       - name: Keep Gradle log on failure
         if: failure()
