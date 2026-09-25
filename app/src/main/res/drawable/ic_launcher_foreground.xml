@@ -1,10 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-	android:width="108dp" android:height="108dp"
-	android:viewportWidth="108" android:viewportHeight="108">
-	<path android:pathData="M34,52 C34,32 50,28 54,40 C58,52 74,48 74,32"
-		android:strokeColor="#ECEFF1" android:strokeWidth="5" android:strokeLineCap="round" android:fillColor="#00000000" />
-	<path android:pathData="M42,64 C46,74 58,76 66,70"
-		android:strokeColor="#B0BEC5" android:strokeWidth="5" android:strokeLineCap="round" android:fillColor="#00000000" />
-	<path android:pathData="M54,78 a6,6 0 1,0 0.01,0 z" android:fillColor="#FF7043" />
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <!-- Smoke rising from the ember -->
+    <path
+        android:pathData="M58,30 C60,24 66,22 68,16"
+        android:strokeWidth="1.8"
+        android:strokeColor="#CCF5F5F5"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M62,32 C66,26 74,26 76,18"
+        android:strokeWidth="1.5"
+        android:strokeColor="#99EEEEEE"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+    <path
+        android:pathData="M56,28 C54,22 58,16 64,12"
+        android:strokeWidth="1.4"
+        android:strokeColor="#88FFFFFF"
+        android:strokeLineCap="round"
+        android:fillColor="#00000000" />
+
+    <!-- Tilted cigarette in the adaptive-icon safe zone -->
+    <group
+        android:pivotX="54"
+        android:pivotY="56"
+        android:rotation="-28">
+
+        <!-- Soft ember glow -->
+        <path
+            android:pathData="M54,28 a11,11 0 1,0 0.1,0 z"
+            android:fillColor="#55FF7043" />
+
+        <!-- White cigarette body -->
+        <path
+            android:pathData="M49,34 h10 v38 h-10 z"
+            android:fillColor="#F4F4F4" />
+        <!-- Highlight stripe -->
+        <path
+            android:pathData="M51,35 h2.2 v36 h-2.2 z"
+            android:fillColor="#FFFFFF" />
+
+        <!-- Grey ash ring under the ember -->
+        <path
+            android:pathData="M49,34 h10 v3 h-10 z"
+            android:fillColor="#9E9E9E" />
+
+        <!-- Tan filter -->
+        <path
+            android:pathData="M49,72 h10 v14 h-10 z"
+            android:fillColor="#D7A86E" />
+        <path
+            android:pathData="M49,74 h10 M49,76.5 h10 M49,79 h10 M49,81.5 h10"
+            android:strokeWidth="0.55"
+            android:strokeColor="#C4925A"
+            android:fillColor="#00000000" />
+        <!-- Filter tip cap -->
+        <path
+            android:pathData="M49,84 h10 v2.5 h-10 z"
+            android:fillColor="#C4925A" />
+
+        <!-- Ember -->
+        <path
+            android:pathData="M54,32 a5,5 0 1,0 0.1,0 z"
+            android:fillColor="#FF6A00" />
+        <path
+            android:pathData="M54,32 a2.4,2.4 0 1,0 0.1,0 z"
+            android:fillColor="#FFD54F" />
+    </group>
 </vector>
