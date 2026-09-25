@@ -47,6 +47,29 @@ jobs:
               print("MainBinding import already present")
           PY
 
+      - name: Repair truncated MainActivity tail
+        run: |
+          python3 - <<'PY'
+          p = "app/src/main/java/com/smoke/browser/MainActivity.java"
+          s = open(p, encoding="utf-8", errors="ignore").read()
+          marker = "new android.graphics.drawable.ColorDrawable(a"
+          if s.rstrip().endswith(marker):
+              s = s.rstrip()[:-len(marker)]
+              s += """new android.graphics.drawable.ColorDrawable(android.graphics.Color.TRANSPARENT));
+                      int width = (int)(context.getResources().getDisplayMetrics().widthPixels * 0.90);
+                      dialog.getWindow().setLayout(width, android.view.ViewGroup.LayoutParams.WRAP_CONTENT);
+                  }
+
+                  dialog.show();
+              }
+          }
+          """
+              open(p, "w", encoding="utf-8", newline="").write(s)
+              print("repaired truncated showShortcutDialog tail")
+          else:
+              print("file tail already complete")
+          PY
+
       - name: Install Android command-line tools
         run: |
           set -euo pipefail
