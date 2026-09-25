@@ -73,6 +73,9 @@ jobs:
       - name: Apply Smoker feature pack
         run: python3 scripts/apply_smoker_pack.py
 
+      - name: Apply Smoker fixes
+        run: python3 scripts/apply_smoker_fixes.py
+
       - name: Install Android command-line tools
         run: |
           set -euo pipefail
