@@ -1921,7 +1921,6 @@ public class MainActivity extends AppCompatActivity {
 
     // 🔥 Smoker Bots: named, savable automation bots
     private static final String SMOKER_BOTS_KEY = "smoker_bots_json";
-    private static final String SMOKER_BOTS_SEEDED = "smoker_bots_seeded_v1";
 
     private org.json.JSONArray getSavedBots() {
         String raw = getSharedPreferences("BotPrefs", 0).getString(SMOKER_BOTS_KEY, "[]");
@@ -1932,28 +1931,6 @@ public class MainActivity extends AppCompatActivity {
         getSharedPreferences("BotPrefs", 0).edit().putString(SMOKER_BOTS_KEY, bots.toString()).apply();
     }
 
-    private void seedPresetBots() {
-        android.content.SharedPreferences p = getSharedPreferences("BotPrefs", 0);
-        if (p.getBoolean(SMOKER_BOTS_SEEDED, false)) return;
-        org.json.JSONArray bots = getSavedBots();
-        String[][] presets = {
-            {"🌙 Dark Mode", "document.querySelectorAll('img,video').forEach(function(m){m.style.filter='invert(1) hue-rotate(180deg)';});document.documentElement.style.filter='invert(1) hue-rotate(180deg)';document.body.style.background='#111';"},
-            {"🚫 Ad Nuker", "var s=['iframe','ins','.ad','.ads','.advert','[id*=ad-]','[class*=sponsor]'];s.forEach(function(q){document.querySelectorAll(q).forEach(function(e){e.remove();});});"},
-            {"📜 Auto Scroll", "if(window.__smokerScroll){clearInterval(window.__smokerScroll);window.__smokerScroll=null;}else{window.__smokerScroll=setInterval(function(){window.scrollBy(0,2);},30);}"},
-            {"📖 Reader Mode", "var b=document.body;b.style.background='#faf7f2';b.style.color='#222';b.style.fontFamily='Georgia,serif';b.style.fontSize='19px';b.style.lineHeight='1.7';b.style.maxWidth='680px';b.style.margin='24px auto';b.style.padding='0 16px';document.querySelectorAll('nav,header,footer,aside,iframe,form,button').forEach(function(e){e.remove();});"},
-            {"🛡 Popup Blocker", "window.open=function(){return null;};window.alert=function(){};window.confirm=function(){return true;};window.prompt=function(){return null;};document.querySelectorAll('[class*=popup],[class*=modal],[id*=popup],[id*=modal],[class*=overlay]').forEach(function(e){e.style.display='none';});"}
-        };
-        try {
-            for (String[] pr : presets) {
-                org.json.JSONObject o = new org.json.JSONObject();
-                o.put("name", pr[0]);
-                o.put("code", pr[1]);
-                bots.put(o);
-            }
-        } catch (Exception ignored) {}
-        persistBots(bots);
-        p.edit().putBoolean(SMOKER_BOTS_SEEDED, true).apply();
-    }
 
     private void runSmokerBot(final android.webkit.WebView webView, String name, String code) {
         getSharedPreferences("BotPrefs", 0).edit().putString(BOT_CODE_KEY, code).apply();
@@ -1963,7 +1940,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showSmokerBotsDialog(final android.webkit.WebView webView) {
-        seedPresetBots();
         final android.app.Dialog dialog = new android.app.Dialog(this);
         android.widget.LinearLayout root = new android.widget.LinearLayout(this);
         root.setOrientation(android.widget.LinearLayout.VERTICAL);
@@ -1991,7 +1967,7 @@ public class MainActivity extends AppCompatActivity {
         final android.widget.LinearLayout botList = new android.widget.LinearLayout(this);
         botList.setOrientation(android.widget.LinearLayout.VERTICAL);
         android.widget.ScrollView scroll = new android.widget.ScrollView(this);
-        scroll.setLayoutParams(new android.widget.LinearLayout.LayoutParams(-1, 0, 1.0f));
+        scroll.setLayoutParams(new android.widget.LinearLayout.LayoutParams(-1, (int)(getResources().getDisplayMetrics().heightPixels * 0.45)));
         scroll.addView(botList);
         root.addView(scroll);
 
@@ -2050,6 +2026,16 @@ public class MainActivity extends AppCompatActivity {
             botList.addView(row);
         }
 
+        if (bots.length() == 0) {
+            android.widget.TextView empty = new android.widget.TextView(this);
+            empty.setText("No saved bots yet.\nTap ＋ NEW BOT to create your first one.");
+            empty.setTextColor(0xFF78909C);
+            empty.setTextSize(14);
+            empty.setGravity(android.view.Gravity.CENTER);
+            empty.setPadding(0, 60, 0, 60);
+            botList.addView(empty);
+        }
+
         androidx.cardview.widget.CardView newBtn = createCardButton("＋ NEW BOT", 0xFFFF7043, 0xFFFFFFFF, false, false);
         androidx.cardview.widget.CardView quickBtn = createCardButton("⚡ QUICK RUN (one-off code)", 0xFF263238, 0xFFFFB74D, false, false);
         root.addView(newBtn);
@@ -2089,7 +2075,11 @@ public class MainActivity extends AppCompatActivity {
         nameIn.setTextColor(0xFFFFFFFF);
         nameIn.setHintTextColor(0xFF78909C);
         nameIn.setSingleLine(true);
-        nameIn.setBackgroundResource(android.R.drawable.editbox_background_normal);
+        android.graphics.drawable.GradientDrawable nameBg = new android.graphics.drawable.GradientDrawable();
+        nameBg.setCornerRadius(14f);
+        nameBg.setColor(0xFF263238);
+        nameIn.setBackground(nameBg);
+        nameIn.setPadding(24, 18, 24, 18);
         root.addView(nameIn);
 
         final android.widget.EditText codeIn = new android.widget.EditText(this);
@@ -2099,7 +2089,11 @@ public class MainActivity extends AppCompatActivity {
         codeIn.setGravity(android.view.Gravity.TOP);
         codeIn.setMinLines(5);
         codeIn.setTypeface(android.graphics.Typeface.MONOSPACE);
-        codeIn.setBackgroundResource(android.R.drawable.editbox_background_normal);
+        android.graphics.drawable.GradientDrawable codeBg = new android.graphics.drawable.GradientDrawable();
+        codeBg.setCornerRadius(14f);
+        codeBg.setColor(0xFF263238);
+        codeIn.setBackground(codeBg);
+        codeIn.setPadding(24, 18, 24, 18);
         android.widget.LinearLayout.LayoutParams codeLp = new android.widget.LinearLayout.LayoutParams(-1, 0, 1.0f);
         codeLp.setMargins(0, 20, 0, 0);
         codeIn.setLayoutParams(codeLp);
